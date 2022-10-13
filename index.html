@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css">
-    <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css.map"> -->
+    <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css.map">
     <script src="javascript.js" defer></script>
     <title>Jam Mundur / Countdown Time</title>
 </head>
 <style>
-    .btn-outline {
+    /*.btn-outline {
         text-decoration: none;
         font-size: 1em;
         color: rgb(118, 109, 244);
@@ -49,19 +49,26 @@
     .btn-outline:hover:after {
         width: calc(100% + 10px);
         height: calc(100% + 10px);
+    }*/
+    input:focus {
+        font-family: caveat;
+    }
+
+    .font-special {
+        font-family: caveat;
     }
 </style>
 
 <body>
     <div class="mt-4 container" id="main-div">
         <div class="row text-md-center justify-content-center">
-            <h1 class="fs-4">Waktu Jalan Mundur</h1>
-            <div class="col-md-6">
+            <h1 class="fs-2">Waktu Jalan Mundur</h1>
+            <div class="col-md-4">
                 <div class="mb-3 text-center" id="countdown-box"></div>
                 <form action="#" method="post" id="date-form">
                     <input type="date" class="form-control" name="date-input" id="date-input">
                     <input type="time" class="form-control" name="time-input" id="time-input">
-                    <button type="submit" class="btn btn-outline-primary mt-4">Sumbit</button>
+                    <button type="submit" class="btn btn-danger mt-4">Sumbit</button>
                 </form>
             </div>
         </div>
