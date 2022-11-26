@@ -28,7 +28,7 @@ dateform.addEventListener("submit", e => {
             countdown.innerHTML = `<b class="fw-bolder fs-5 font-special">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</b>`
             // countdown.innerHTML = '${d} days, ${h} hours, ${m} month, ${s} seconds'
         } else {
-            countdown.innerHTML = '<b class="fw-bolder fs-5">Waktu Telah Habis</b>'
+            countdown.innerHTML = '<b class="fw-bolder fs-5 font-special">Waktu Telah Habis</b>'
         }
     }, 1000)
 })
