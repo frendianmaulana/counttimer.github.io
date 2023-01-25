@@ -9,47 +9,12 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="D:\HTML 5\bootstrap-5.2.0-beta1\dist\css\bootstrap.min.css.map">
+    <link rel="shortcut icon" href="Img/clock.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="javascript.js" defer></script>
     <title>Jam Mundur / Countdown Time</title>
 </head>
 <style>
-    /*.btn-outline {
-        text-decoration: none;
-        font-size: 1em;
-        color: rgb(118, 109, 244);
-        padding: 10px 30px;
-        border: 2px solid rgb(118, 109, 244);
-        position: relative;
-        transition: .5s;
-    }
-
-    .btn-outline::before,
-    .btn-outline::after {
-        content: "";
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        border: inherit;
-        transition: .5s;
-    }
-
-    .btn-outline::before {
-        top: -10px;
-        left: -10px;
-        border-width: 2px 0 0 2px;
-    }
-
-    .btn-outline::after {
-        bottom: -10px;
-        right: -10px;
-        border-width: 0 2px 2px 0;
-    }
-
-    .btn-outline:hover:before,
-    .btn-outline:hover:after {
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-    }*/
     input:focus {
         font-family: caveat;
     }
@@ -65,14 +30,14 @@
 
 <body>
     <div class="mt-4 container" id="main-div">
-        <div class="row text-md-center justify-content-center">
+        <div class="row text-sm-center justify-content-center">
             <h1 class="fs-2">Waktu Jalan Mundur</h1>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="mb-3 text-center" id="countdown-box"></div>
                 <form action="#" method="post" id="date-form">
                     <input type="date" class="form-control" name="date-input" id="date-input">
                     <input type="time" class="form-control" name="time-input" id="time-input">
-                    <button type="submit" class="btn btn-outline-primary mt-4 text-black font-special fw-bolder">Enter</button>
+                    <button type="submit" class="btn btn-outline-primary mt-4 font-special fw-bolder">Enter</button>
                 </form>
             </div>
         </div>
