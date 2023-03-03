@@ -26,9 +26,11 @@ dateform.addEventListener("submit", e => {
         const diff = eventdate - now
         if (diff > 0) {
             countdown.innerHTML = `<b class="fw-bolder fs-5 font-special">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</b>`
+            countdown.innerHTML = `<div class="alert alert-success d-flex align-items-center text-center container fw-bolder" role="alert">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</div>`
             // countdown.innerHTML = '${d} days, ${h} hours, ${m} month, ${s} seconds'
         } else {
-            countdown.innerHTML = '<b class="fw-bolder fs-5 font-special">Waktu Telah Habis</b>'
+            // countdown.innerHTML = '<b class="fw-bolder fs-5 font-special">Waktu Telah Habis</b>'
+            countdown.innerHTML = '<div class="alert alert-danger d-flex align-items-center text-center container" role="alert"><i class="bi bi-x-circle-fill"></i>&nbsp;<div class="fw-bolder">Waktu Telah Habis</div></div>'
         }
     }, 1000)
 })

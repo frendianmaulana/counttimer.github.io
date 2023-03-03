@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <!-- Icon Boostrap -->
+    <!-- Icon Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="Img/clock.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="javascript.js" defer></script>
@@ -33,7 +36,8 @@
         <div class="container">
             <ul class="nav justify-content-center ms-auto">
                 <li class=" nav-item dropdown">
-                    <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        data-bs-reference="parent">
                         <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -64,10 +68,13 @@
             <div class="col-md-6">
                 <div class="mb-3 text-center" id="countdown-box"></div>
                 <form action="#" method="post" id="date-form">
-                    <input type="date" class="form-control" name="date-input" id="date-input">
-                    <input type="time" class="form-control" name="time-input" id="time-input">
-                    <button type="submit" class="btn mt-4 font-special fw-bolder"
-                        style="background-color: var(--bs-emphasis-color); color: var(--bs-body-bg);">Enter</button>
+                    <input type="date" class="form-control"
+                        style="background-color: var(--bs-tertiary-bg); color: var(--bs-emphasis-color);"
+                        name="date-input" id="date-input">
+                    <input type="time" class="form-control"
+                        style="background-color: var(--bs-tertiary-bg); color: var(--bs-emphasis-color);"
+                        name="time-input" id="time-input">
+                    <button type="submit" class="btn mt-4 font-special fw-bolder btn-outline-primary">Enter</button>
                 </form>
             </div>
             <div id="clock"></div>
@@ -194,6 +201,35 @@
                 })
         })
     })()
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+
+        var pageTitle = document.title;
+        var attentionMessage = 'Jangan lupa kesini lagi!';
+        var blinkEvent = null;
+
+        document.addEventListener('visibilitychange', function (e) {
+            var isPageActive = !document.hidden;
+
+            if (!isPageActive) {
+                blink();
+            } else {
+                document.title = pageTitle;
+                clearInterval(blinkEvent);
+            }
+        });
+
+        function blink() {
+            blinkEvent = setInterval(function () {
+                if (document.title === attentionMessage) {
+                    document.title = pageTitle;
+                } else {
+                    document.title = attentionMessage;
+                }
+            }, 100);
+        }
+    };
 </script>
 
 </html>
