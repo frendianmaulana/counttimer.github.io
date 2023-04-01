@@ -18,7 +18,7 @@ function showTime() {
     curr_hour = checkTime(curr_hour);
     curr_minute = checkTime(curr_minute);
     curr_second = checkTime(curr_second);
-    document.getElementById('clock').innerHTML = "<b> Waktu: " + curr_hour + ":" + curr_minute + ":" + curr_second + " " + "</b>";
+    document.getElementById('clock').innerHTML = "<b class='text-primary'> Waktu: " + curr_hour + ":" + curr_minute + ":" + curr_second + " " + "</b>";
 }
 
 function checkTime(i) {
