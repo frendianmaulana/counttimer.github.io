@@ -6,7 +6,7 @@ dateform.addEventListener("submit", e => {
     const dateinput = document.getElementById("date-input")
     const timeinput = document.getElementById("time-input")
     const eventdate = Date.parse(dateinput.value + " " + timeinput.value)
-    console.log(eventdate)
+    // console.log(eventdate)
 
     window.eventCountdown && clearInterval(window.eventCountdown)
 
@@ -25,12 +25,13 @@ dateform.addEventListener("submit", e => {
 
         const diff = eventdate - now
         if (diff > 0) {
-            // countdown.innerHTML = `<b class="fw-bolder fs-5 font-special">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</b>`
-            countdown.innerHTML = `<div class="alert alert-success d-flex align-items-center text-left container fw-bolder" role="alert"><i class="bi bi-stopwatch fs-3"></i>&nbsp;<div style="color: var(--bs-emphasis-color)">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</div></div>`
+            // countdown.innerHTML = `< b class="fw-bolder fs-5 font-special" > ${ d } Hari, ${ h } Jam, ${ m } Menit, ${ s } Detik</ > `
+            countdown.innerHTML = `<div class="alert alert-success d-flex align-items-center text-left container fw-bolder" role = "alert"><i class="bi bi-stopwatch-fill fs-6"></i> &nbsp; <div style="color: var(--bs-emphasis-color)">${d} Hari, ${h} Jam, ${m} Menit, ${s} Detik</div></> `
             // countdown.innerHTML = '${d} days, ${h} hours, ${m} month, ${s} seconds'
         } else {
             // countdown.innerHTML = '<b class="fw-bolder fs-5 font-special">Waktu Telah Habis</b>'
             countdown.innerHTML = '<div class="alert alert-info d-flex align-items-center text-left" role="alert"><i class="bi bi-info-circle-fill"></i>&nbsp;<div class="fw-bolder text-center" style="color: var(--bs-emphasis-color)">Waktu Telah Habis</div></div>'
+            // countdown.innerHTML = b;
         }
     }, 1000)
 })
